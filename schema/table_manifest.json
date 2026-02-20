@@ -1,0 +1,271 @@
+{
+  "tables": {
+    "AdversarialTestCases": {
+      "rows": 5,
+      "category": "lookup",
+      "parquet_path": "data/lookups/AdversarialTestCases.parquet",
+      "sample_path": "data/samples/AdversarialTestCases_sample.parquet",
+      "size_bytes": 4021,
+      "size_human": "3.9 KB",
+      "sha256": "f968f5bc4c20cd862ce5ac41482d224f95fd945d7dca9754d4dba0700b939213"
+    },
+    "Definitions": {
+      "rows": 115840,
+      "category": "large",
+      "parquet_path": "data/release/Definitions.parquet",
+      "sample_path": "data/samples/Definitions_sample.parquet",
+      "size_bytes": 4384105,
+      "size_human": "4.2 MB",
+      "sha256": "2692d9d2adf1a3a973e48f57e62e841d2adfceb8c640bb2a5dea0db5d97ec4ce"
+    },
+    "Dialects": {
+      "rows": 8,
+      "category": "lookup",
+      "parquet_path": "data/lookups/Dialects.parquet",
+      "sample_path": "data/samples/Dialects_sample.parquet",
+      "size_bytes": 3374,
+      "size_human": "3.3 KB",
+      "sha256": "b4b0c0b77d9b38fa997ed128a7f8f39cf48e6d049d78c2d0c0938752d88fdd6b"
+    },
+    "DistinctiveFeatures": {
+      "rows": 12,
+      "category": "lookup",
+      "parquet_path": "data/lookups/DistinctiveFeatures.parquet",
+      "sample_path": "data/samples/DistinctiveFeatures_sample.parquet",
+      "size_bytes": 3430,
+      "size_human": "3.3 KB",
+      "sha256": "e99bafdc233eadb33b4dcf31ce63b28cb5fdae71ce5d009864d88228ff886c82"
+    },
+    "G2PAlignments": {
+      "rows": 220304,
+      "category": "large",
+      "parquet_path": "data/release/G2PAlignments.parquet",
+      "sample_path": "data/samples/G2PAlignments_sample.parquet",
+      "size_bytes": 1593709,
+      "size_human": "1.5 MB",
+      "sha256": "2166e1d164a6c8f3dbb92f359e2b99fb2c7da130d7874bccb4f2b490484405ab"
+    },
+    "IpaAllowedChars": {
+      "rows": 611,
+      "category": "lookup",
+      "parquet_path": "data/lookups/IpaAllowedChars.parquet",
+      "sample_path": "data/samples/IpaAllowedChars_sample.parquet",
+      "size_bytes": 2394,
+      "size_human": "2.3 KB",
+      "sha256": "6aa9b90670f82dafd0a9aa8ba1caacdff58f7d1b4bd353a984a9c480e55c04cc"
+    },
+    "Languages": {
+      "rows": 1,
+      "category": "lookup",
+      "parquet_path": "data/lookups/Languages.parquet",
+      "sample_path": "data/samples/Languages_sample.parquet",
+      "size_bytes": 3241,
+      "size_human": "3.2 KB",
+      "sha256": "08ff05b568edbe7e3500785bb31af2eb778a48ed48366aa2fe9448eddd28ddb3"
+    },
+    "PartOfSpeech": {
+      "rows": 43,
+      "category": "lookup",
+      "parquet_path": "data/lookups/PartOfSpeech.parquet",
+      "sample_path": "data/samples/PartOfSpeech_sample.parquet",
+      "size_bytes": 3994,
+      "size_human": "3.9 KB",
+      "sha256": "6d0ef0bf328773891c50f156a0b2465f3fedabd92de0d0288ae03a63a9edbc3a"
+    },
+    "PhonemeCategories": {
+      "rows": 5,
+      "category": "lookup",
+      "parquet_path": "data/lookups/PhonemeCategories.parquet",
+      "sample_path": "data/samples/PhonemeCategories_sample.parquet",
+      "size_bytes": 1412,
+      "size_human": "1.4 KB",
+      "sha256": "f66bdf9e45486e5cd9ba45ca13d6de4622f80bde6205109952d83a475a229e2a"
+    },
+    "PhonemeFeatureValues": {
+      "rows": 27,
+      "category": "lookup",
+      "parquet_path": "data/lookups/PhonemeFeatureValues.parquet",
+      "sample_path": "data/samples/PhonemeFeatureValues_sample.parquet",
+      "size_bytes": 1895,
+      "size_human": "1.9 KB",
+      "sha256": "f130319cae1d2cf605fbf29c6b43e47fa393bd4795beaac4047c2c5c70b31d88"
+    },
+    "Phonemes": {
+      "rows": 39,
+      "category": "lookup",
+      "parquet_path": "data/lookups/Phonemes.parquet",
+      "sample_path": "data/samples/Phonemes_sample.parquet",
+      "size_bytes": 4098,
+      "size_human": "4.0 KB",
+      "sha256": "370aa9757a660757091926b83ee2f5f2cc081df9fc177957de42b7eaf364b79f"
+    },
+    "Regions": {
+      "rows": 6,
+      "category": "lookup",
+      "parquet_path": "data/lookups/Regions.parquet",
+      "sample_path": "data/samples/Regions_sample.parquet",
+      "size_bytes": 3053,
+      "size_human": "3.0 KB",
+      "sha256": "3cc1029bfc782564de443570f36b9fc9016216fb635ca67aa0444392945230d7"
+    },
+    "RegisterTypes": {
+      "rows": 1,
+      "category": "lookup",
+      "parquet_path": "data/lookups/RegisterTypes.parquet",
+      "sample_path": "data/samples/RegisterTypes_sample.parquet",
+      "size_bytes": 1920,
+      "size_human": "1.9 KB",
+      "sha256": "d81b79278a3dd3b1f7e0dad45fbf0c8f2a13742410cf787b7941366d34939949"
+    },
+    "RhymePatterns": {
+      "rows": 57459,
+      "category": "large",
+      "parquet_path": "data/release/RhymePatterns.parquet",
+      "sample_path": "data/samples/RhymePatterns_sample.parquet",
+      "size_bytes": 958412,
+      "size_human": "935.9 KB",
+      "sha256": "eaba065ca04595bfbf7653ebdc0281ad0626041ed4129d49a3afa00df7fffb50"
+    },
+    "SchemaMetadata": {
+      "rows": 1,
+      "category": "lookup",
+      "parquet_path": "data/lookups/SchemaMetadata.parquet",
+      "sample_path": "data/samples/SchemaMetadata_sample.parquet",
+      "size_bytes": 2630,
+      "size_human": "2.6 KB",
+      "sha256": "4ac755ce99c7524696008119adc32465ad5f80be595bbfa2dbc11cb30e6f5868"
+    },
+    "SemanticRelationshipTypes": {
+      "rows": 2,
+      "category": "lookup",
+      "parquet_path": "data/lookups/SemanticRelationshipTypes.parquet",
+      "sample_path": "data/samples/SemanticRelationshipTypes_sample.parquet",
+      "size_bytes": 2408,
+      "size_human": "2.4 KB",
+      "sha256": "7f06ef4a0f2d4e159c26da432270ad9d35c1ec537f82104b6d01fb72eb8081a1"
+    },
+    "SemanticRelationships": {
+      "rows": 274460,
+      "category": "large",
+      "parquet_path": "data/release/SemanticRelationships.parquet",
+      "sample_path": "data/samples/SemanticRelationships_sample.parquet",
+      "size_bytes": 2112499,
+      "size_human": "2.0 MB",
+      "sha256": "e936a429c04b0e94ada90127fa6575a2b4c24db3323cf3d5e3f8564983ca6cef"
+    },
+    "Senses": {
+      "rows": 116267,
+      "category": "large",
+      "parquet_path": "data/release/Senses.parquet",
+      "sample_path": "data/samples/Senses_sample.parquet",
+      "size_bytes": 822353,
+      "size_human": "803.1 KB",
+      "sha256": "a49b7de9fa66ba480802288bd189ef5f2a8e0c841795b2d9719419dba854a48f"
+    },
+    "SyllableInfo": {
+      "rows": 2663935,
+      "category": "large",
+      "parquet_path": "data/release/SyllableInfo.parquet",
+      "sample_path": "data/samples/SyllableInfo_sample.parquet",
+      "size_bytes": 6769888,
+      "size_human": "6.5 MB",
+      "sha256": "923a50290712b737e50d439191c13dc1dc73602b5dabdf215a26ea7437ad1a63"
+    },
+    "SyllableTypes": {
+      "rows": 9,
+      "category": "lookup",
+      "parquet_path": "data/lookups/SyllableTypes.parquet",
+      "sample_path": "data/samples/SyllableTypes_sample.parquet",
+      "size_bytes": 1504,
+      "size_human": "1.5 KB",
+      "sha256": "7a32dbc8b88d1419811c1614b0841059af7c6f72f644634bb0a696c9e58d13c5"
+    },
+    "SynonymCache": {
+      "rows": 274460,
+      "category": "large",
+      "parquet_path": "data/release/SynonymCache.parquet",
+      "sample_path": "data/samples/SynonymCache_sample.parquet",
+      "size_bytes": 2107158,
+      "size_human": "2.0 MB",
+      "sha256": "835869d1cb3eb36989a810a1e69d03fc8e357e3dc9d1f78f90bff0660db18746"
+    },
+    "TestSuites": {
+      "rows": 1,
+      "category": "lookup",
+      "parquet_path": "data/lookups/TestSuites.parquet",
+      "sample_path": "data/samples/TestSuites_sample.parquet",
+      "size_bytes": 2763,
+      "size_human": "2.7 KB",
+      "sha256": "fa59396689b611f715c115c1f6f3e51f9f34024a38a5cdf13aa53072ecf73cdb"
+    },
+    "UsageExamples": {
+      "rows": 15730,
+      "category": "large",
+      "parquet_path": "data/release/UsageExamples.parquet",
+      "sample_path": "data/samples/UsageExamples_sample.parquet",
+      "size_bytes": 264109,
+      "size_human": "257.9 KB",
+      "sha256": "33c505bc2a3bc929767f1c6a1d95cae3b84217d950be92964938ce488028c69a"
+    },
+    "Variants": {
+      "rows": 220422,
+      "category": "large",
+      "parquet_path": "data/release/Variants.parquet",
+      "sample_path": "data/samples/Variants_sample.parquet",
+      "size_bytes": 4321090,
+      "size_human": "4.1 MB",
+      "sha256": "76022e3a09b9f1d15815fac6d916848b579dc12437dcf822c8682ea186efbacc"
+    },
+    "WordPhonemes": {
+      "rows": 2630652,
+      "category": "large",
+      "parquet_path": "data/release/WordPhonemes.parquet",
+      "sample_path": "data/samples/WordPhonemes_sample.parquet",
+      "size_bytes": 4194032,
+      "size_human": "4.0 MB",
+      "sha256": "bc46028d494f7d4b0664dbee5c2b27ed99537c3d690bddd65b38f08b73b46a7b"
+    },
+    "Words": {
+      "rows": 220392,
+      "category": "large",
+      "parquet_path": "data/release/Words.parquet",
+      "sample_path": "data/samples/Words_sample.parquet",
+      "size_bytes": 2344190,
+      "size_human": "2.2 MB",
+      "sha256": "a7ed822cf1fad4f941314700e8d27e4c604452c6710312ee57a064405e83ad2c"
+    },
+    "heteronym_groups": {
+      "rows": 116,
+      "category": "lookup",
+      "parquet_path": "data/lookups/heteronym_groups.parquet",
+      "sample_path": "data/samples/heteronym_groups_sample.parquet",
+      "size_bytes": 3455,
+      "size_human": "3.4 KB",
+      "sha256": "d92be5c854f78de47acb3a81cb9afa32b0f175925f69084a40124b13347541f7"
+    },
+    "heteronym_pronunciations": {
+      "rows": 235,
+      "category": "lookup",
+      "parquet_path": "data/lookups/heteronym_pronunciations.parquet",
+      "sample_path": "data/samples/heteronym_pronunciations_sample.parquet",
+      "size_bytes": 14170,
+      "size_human": "13.8 KB",
+      "sha256": "88b42567427f57462c83cd83b360e2ac8ff2e4f77b5dd865f1972dce70e0d496"
+    },
+    "kernel_schema_versions": {
+      "rows": 1,
+      "category": "lookup",
+      "parquet_path": "data/lookups/kernel_schema_versions.parquet",
+      "sample_path": "data/samples/kernel_schema_versions_sample.parquet",
+      "size_bytes": 1729,
+      "size_human": "1.7 KB",
+      "sha256": "71c8a8b9590b9743f7beabe2372fed3d08be6af74edf1a3e1dd1cff5b211b187"
+    }
+  },
+  "export_meta": {
+    "source_db": "ultimate_2025_enhanced.db",
+    "zstd_level": 9,
+    "in_git_threshold": 5000,
+    "pyarrow_used": true
+  }
+}

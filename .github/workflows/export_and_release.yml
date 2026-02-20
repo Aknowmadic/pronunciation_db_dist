@@ -1,0 +1,109 @@
+name: Export & Release Parquet Distribution
+
+on:
+  push:
+    tags:
+      - "v*"               # triggers on any tag like v1.0.0, v1.2.3
+  workflow_dispatch:       # allows manual trigger from GitHub Actions UI
+    inputs:
+      release_tag:
+        description: "Release tag (e.g. v1.0.0)"
+        required: true
+
+jobs:
+  export-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # needed to create GitHub Releases
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install pyarrow pandas
+
+      # ---------------------------------------------------------------
+      # Option A: Database is stored in the repo (not recommended for
+      # 500MB+ files).  Use this only if DB is in git LFS.
+      # ---------------------------------------------------------------
+      # - name: Pull LFS objects
+      #   run: git lfs pull
+
+      # ---------------------------------------------------------------
+      # Option B (RECOMMENDED): Download the source DB from a prior
+      # release or from a secure artifact store.
+      # ---------------------------------------------------------------
+      - name: Download source database
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Replace this with your actual DB source URL or artifact download
+          # Example using a prior release:
+          # gh release download v0.9.0 --pattern "*.db" --output ultimate_2025_enhanced.db
+          echo "Place your DB download command here"
+          # For testing, create a minimal stub:
+          python -c "import sqlite3; c=sqlite3.connect('ultimate_2025_enhanced.db'); c.close()"
+
+      - name: Run Parquet export
+        run: |
+          python scripts/export.py \
+            --db ultimate_2025_enhanced.db \
+            --out . \
+            --sample-size 1000
+
+      - name: Determine release tag
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=${{ github.event.inputs.release_tag }}" >> $GITHUB_OUTPUT
+          else
+            echo "tag=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release with large-table Parquet assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+          # Gather all large-table Parquet files
+          ASSETS=$(find data/release -name "*.parquet" | tr '\n' ' ')
+
+          gh release create "$TAG" $ASSETS \
+            --title "Pronunciation DB $TAG" \
+            --notes "## Pronunciation DB Distribution $TAG
+
+          ### Contents
+          - \`data/lookups/*.parquet\` — small reference tables (in this repo)
+          - \`data/samples/*_sample.parquet\` — 1000-row samples (in this repo)
+          - Large tables attached to this release as \`.parquet\` assets
+
+          ### Reconstruct locally
+          \`\`\`bash
+          git clone https://github.com/${{ github.repository }}
+          cd pronunciation_db_dist
+          pip install pyarrow
+          python scripts/build.py --release $TAG
+          \`\`\`
+
+          ### Quick validation after build
+          \`\`\`bash
+          python scripts/validate.py
+          \`\`\`
+          " \
+            --repo ${{ github.repository }}
+
+      - name: Upload manifest and schema as release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+          gh release upload "$TAG" schema/schema.sql schema/table_manifest.json \
+            --repo ${{ github.repository }} \
+            --clobber

@@ -1,0 +1,23 @@
+# The source SQLite database — never commit this
+*.db
+*.sqlite
+*.sqlite3
+
+# Large release assets — these live on GitHub Releases, not in git
+data/release/
+
+# Temporary downloads during reconstruction
+data/_tmp_downloaded/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
