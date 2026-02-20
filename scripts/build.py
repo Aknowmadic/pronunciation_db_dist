@@ -53,7 +53,7 @@ if not HAS_PYARROW and not HAS_PANDAS:
 # ---------------------------------------------------------------------------
 # Configuration — update GITHUB_REPO before publishing
 # ---------------------------------------------------------------------------
-GITHUB_REPO  = "YOUR_USERNAME/pronunciation_db_dist"   # ← set your GitHub repo here
+GITHUB_REPO  = "Aknowmadic/pronunciation_db_dist"
 RELEASE_TAG  = "latest"                                 # overridden by --release
 
 OUT_DEFAULT  = Path("pronunciation_db_reconstructed.db")
